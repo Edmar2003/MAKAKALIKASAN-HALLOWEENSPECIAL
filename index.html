@@ -1435,36 +1435,7 @@
             animation: float 4s ease-in-out infinite;
             z-index: 1;
         }
-        
-        
-        .adviser-star {
-            position: absolute;
-            font-size: 25px;
-            animation: adviserStarTwinkle 4s ease-in-out infinite;
-            z-index: 1;
-            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-        }
-        
-        @keyframes adviserStarTwinkle {
-            0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
-            25% { opacity: 0.7; transform: scale(1.1) rotate(90deg); }
-            50% { opacity: 1; transform: scale(1.3) rotate(180deg); }
-            75% { opacity: 0.7; transform: scale(1.1) rotate(270deg); }
-        }
-        
-        .adviser-planet {
-            position: absolute;
-            font-size: 30px;
-            animation: adviserPlanetOrbit 12s linear infinite;
-            z-index: 1;
-            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-        }
-        
-        @keyframes adviserPlanetOrbit {
-            0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
-            100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
-        }
-        
+                        
         .classmate-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1775,23 +1746,6 @@
             position: relative;
             overflow: hidden;
             z-index: 20;
-        }
-
-        .castle-silhouette {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 250px;
-            background: 
-                linear-gradient(to top, 
-                    rgba(5, 2, 10, 0.95) 0%,
-                    rgba(10, 5, 15, 0.8) 20%,
-                    rgba(15, 8, 20, 0.6) 40%,
-                    transparent 100%),
-                url("data:image/svg+xml,%3Csvg width='400' height='250' viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 250 L70 200 L90 250 Z M100 250 L120 170 L140 250 Z M150 250 L170 150 L190 250 Z M200 250 L220 130 L240 250 Z M250 250 L270 170 L290 250 Z M300 250 L320 200 L340 250 Z' fill='%23000000' fill-opacity='0.4'/%3E%3Cpath d='M0 250 L400 250 L400 200 L350 200 L350 150 L300 150 L300 100 L250 100 L250 50 L150 50 L150 100 L100 100 L100 150 L50 150 L50 200 L0 200 Z' fill='%23000000' fill-opacity='0.5'/%3E%3C!-- Glowing windows --%3E%3Crect x='80' y='180' width='15' height='20' fill='%23FFD700' opacity='0.6'%3E%3Canimate attributeName='opacity' values='0.3;0.8;0.3' dur='3s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='180' y='160' width='15' height='20' fill='%23FF4500' opacity='0.7'%3E%3Canimate attributeName='opacity' values='0.4;0.9;0.4' dur='4s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='280' y='180' width='15' height='20' fill='%239370DB' opacity='0.5'%3E%3Canimate attributeName='opacity' values='0.2;0.7;0.2' dur='5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E");
-            z-index: 2;
-            pointer-events: none;
         }
 
         .magic-orb {
@@ -2358,40 +2312,8 @@
             margin-bottom: 15px;
             font-weight: bold;
             position: relative;
-            animation: nameFlicker 3s infinite;
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        @keyframes nameFlicker {
-            0%, 100% {
-                color: #ff6b6b;
-                text-shadow: 
-                    0 0 10px #ff0000,
-                    0 0 20px #ff4444,
-                    0 0 30px #ff0000;
-            }
-            25% {
-                color: #c9a0ff;
-                text-shadow: 
-                    0 0 10px #8a2be2,
-                    0 0 20px #9370db,
-                    0 0 30px #8a2be2;
-            }
-            50% {
-                color: #98fb98;
-                text-shadow: 
-                    0 0 10px #00ff00,
-                    0 0 20px #90ee90,
-                    0 0 30px #00ff00;
-            }
-            75% {
-                color: #ffa500;
-                text-shadow: 
-                    0 0 10px #ff8c00,
-                    0 0 20px #ffa500,
-                    0 0 30px #ff8c00;
-            }
         }
         
         .teacher-subject {
@@ -5745,12 +5667,12 @@
     </audio>
 
     <audio id="backgroundMusic" preload="auto" loop>
-        <source src="HalloweenSpecial/Audio/Hallway Ambience.mp3" type="audio/mpeg">
+        <source src="HalloweenSpecial/Audio/HalloweenBGM.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
     <audio id="backgroundMusic2" preload="auto" loop>
-        <source src="HalloweenSpecial/Audio/Hallway Ambience.mp3" type="audio/mpeg">
+        <source src="HalloweenSpecial/Audio/HalloweenBGM.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -6067,11 +5989,6 @@
                 <h3>Our Spooky Mentor: Joseph Agustin Flor</h3>
                 <p>Thank you for guiding us through the haunted halls of senior high. Your wisdom kept the monsters at bay!</p>
 
-                <div class="adviser-star" style="top: 20%; left: 80%; animation-delay: 0.5s;">🕸️</div>
-                <div class="adviser-star" style="top: 60%; left: 85%; animation-delay: 1.5s;">🕸️</div>
-                <div class="adviser-star" style="top: 40%; left: 90%; animation-delay: 2.5s;">️🕸️</div>
-                <div class="adviser-planet" style="top: 10%; left: 70%; animation-delay: 0s;">🎃</div>
-                <div class="adviser-planet" style="top: 80%; left: 75%; animation-delay: 6s;">☠️</div>
             </div>
             
             <!-- Boys -->
@@ -6956,7 +6873,6 @@
     <!-- Teachers -->
     <section id="teachers">
             <div class="teachers-particles"></div>
-            <div class="castle-silhouette"></div>
             <div class="moon"></div>
 
             <div class="magic-orb orange" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
@@ -9185,21 +9101,9 @@
         ];
 
         const studentMessages = [
-            "HAPPY HALLOWEEN, [name]... YOUR PRESENCE MAKES THE GRAVEYARD SHIFT!",
-            "HAPPY HALLOWEEN, [name]... THE GHOSTS HAVE BEEN WAITING FOR YOU!",
-            "HAPPY HALLOWEEN, [name]... YOUR COSTUME LOOKS BLOOD-CURDLINGLY GOOD!",
-            "HAPPY HALLOWEEN, [name]... READY TO JOIN OUR HAUNTED CLASS PHOTO?",
-            "HAPPY HALLOWEEN, [name]... THE PUMPKINS WHISPER YOUR NAME IN THE DARK!",
-            "HAPPY HALLOWEEN, [name]... YOUR LAUGHTER ECHOES THROUGH THE HAUNTED HALLS!",
-            "HAPPY HALLOWEEN, [name]... THE CANDLES FLICKER AS YOU APPROACH!",
-            "HAPPY HALLOWEEN, [name]... YOUR SPIRIT ADDS TO OUR GHOSTLY GATHERING!",
-            "HAPPY HALLOWEEN, [name]... THE FULL MOON BLESSES YOUR ARRIVAL TONIGHT!",
-            "HAPPY HALLOWEEN, [name]... READY TO DANCE WITH THE SHADOWS?",
-            "HAPPY HALLOWEEN, [name]... YOUR SMILE LIGHTS UP THE DARKNESS!",
-            "HAPPY HALLOWEEN, [name]... THE NIGHT COMES ALIVE WITH YOU HERE!",
-            "HAPPY HALLOWEEN, [name]... YOUR ENERGY FUELS OUR SPOOKY CELEBRATION!",
-            "HAPPY HALLOWEEN, [name]... THE CREAKING FLOORBOARDS GREET YOUR STEPS!",
-            "HAPPY HALLOWEEN, [name]... YOUR ARRIVAL COMPLETES OUR HAUNTED CIRCLE!"
+          "Ah… [name], the moon itself blushes at your arrival",
+          "[name]… The night awakens as your shadow graces the halls, ",
+          "I sense your heartbeat in the dark, [name]… and my, how lovely you are today."
         ];
 
         const adviserMessages = [
