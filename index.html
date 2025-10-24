@@ -4695,7 +4695,6 @@
         left: 0;
         right: 0;
         height: 20px;
-        background: linear-gradient(to bottom, rgba(26, 10, 10, 0.9), transparent);
         pointer-events: none;
         z-index: 3;
     }
@@ -4707,7 +4706,6 @@
         left: 0;
         right: 0;
         height: 20px;
-        background: linear-gradient(to top, rgba(26, 10, 10, 0.9), transparent);
         pointer-events: none;
         z-index: 3;
     }
@@ -5636,7 +5634,7 @@
             </div>
 
             <h2 class="modal-title">ENTER THE HAUNTED REALM OF MAKAKALIKASAN</h2>
-            <p class="modal-subtitle">Speak your name to awaken the spirits of our haunted class</p>
+            <p class="modal-subtitle">Speak your last name to awaken the spirits of our haunted class</p>
             <input type="text" class="modal-input" id="lastNameInput" placeholder="Whisper your surname">
             <button class="enter-btn" id="enterBtn">SUMMON THE SPIRITS</button>
         </div>
@@ -9112,24 +9110,24 @@
                     <a href="https://edmar2003.github.io/Preview/" class="footer-link-item">
                         <div class="footer-link-icon">👻</div>
                         <div class="footer-link-text">
-                            <div class="footer-link-title">1st UPDATE</div>
-                            <div class="footer-link-desc">v1.0</div>
+                            <div class="footer-link-title">First Release</div>
+                            <div class="footer-link-desc">v1.0 - Original Version</div>
                         </div>
                     </a>
 
                     <a href="https://edmar2003.github.io/MAKANATURE/" class="footer-link-item">
                         <div class="footer-link-icon">🎃</div>
                         <div class="footer-link-text">
-                            <div class="footer-link-title">2nd UPDATE</div>
-                            <div class="footer-link-desc">v2.0</div>
+                            <div class="footer-link-title">Update 1</div>
+                            <div class="footer-link-desc">v2.0 - Futurestic Redesign</div>
                         </div>
                     </a>
 
                     <a href="https://edmar2003.github.io/MAKAKALIKASAN/" class="footer-link-item">
                         <div class="footer-link-icon">🦇</div>
                         <div class="footer-link-text">
-                            <div class="footer-link-title">3rd UPDATE</div>
-                            <div class="footer-link-desc">v3.0</div>
+                            <div class="footer-link-title">Update 2</div>
+                            <div class="footer-link-desc">v3.0 - Memorial Album Update</div>
                         </div>
                     </a>
                 </div>
@@ -9157,7 +9155,7 @@
         </div>
 
         <div class="warning-text" id="warningText">
-            ⚠️ WARNING: Tricks may contain flashing lights and Jumpscares! Proceed with caution. ⚠️
+            ⚠️ WARNING: Jumpscares! Proceed with caution. ⚠️
         </div>
     </div>
     
@@ -9204,17 +9202,24 @@
             <div class="message-icon">
                         <img src="HalloweenSpecial/SPOOKIZ-removebg-preview.png" alt="Message Icon" class="sticker-image">
                     </div>
-            <h3 class="announcement-title">ANNOUNCEMENT</h3>
+            <h3 class="announcement-title">Special Message</h3>
             <div class="announcement-message-container">
                 <p class="announcement-message">
                     👻 HEY <strong>MAKANATURE</strong>! Just wanted to let you know:<br><br>
 
                     📸 <strong>Most photos here came from our group chats!</strong><br>
-                    If you see your photo, that means you’re part of the moments that made our class special. These pictures remind us of the fun times, the laughter, and the memories we shared together. I took and saved them because they show how far we’ve come as friends and classmates. Most of them are yours, and every photo has its own story.<br><br>
+                    If you see the photo you’ve taken, it’s one of the memories that built who we are. it means you’re part of the story that made our class shine.
+                    Every picture here is a piece of time the smiles, the laughter, the days we’ll never find again.
+                    I keep them because they remind me how far we’ve gone, how close we once were.
+                    Each photo has a little story, and maybe… one of them is ours.<br><br>
 
                     🎃 <strong>I update this website on special occasions!</strong><br>
                     Halloween, Christmas, New Year, and Valentine's Day<br>
                     expect new features and memories each time!<br><br>
+
+                    💬 I made this so we’ll always have a place to <strong>look back and smile</strong>.<br>
+                    Time moves fast but these pictures will always <strong>keep our memories close</strong> like a story that never ends.<br>
+                    No matter where we go <strong>this page will always bring us back together.</strong>
 
                     💀 Thanks for being the best class ever! Enjoy our digital memorial!
                 </p>
@@ -9253,6 +9258,7 @@
             { name: "Ramos", subject: "Music", description: "Teaching us the language of emotions through melodies." },
             { name: "Erik", subject: "Research", description: "Guiding us through the process of academic inquiry." }
         ];
+        
 
         // Easter egg messages
         const logoMessages = [
@@ -9310,9 +9316,9 @@
         ];
 
         const adviserMessages = [
-            "Welcome back, Sir! Your guidance made all these memories possible",
-            "Good to see you, Sir thank you for everything you taught our class",
-            "Hello Sir! The whole class appreciates your support and wisdom"
+            "Welcome back, Sir... the halls have been whispering your name since you left",
+            "Good evening, Sir... your old lessons still echo in the dark corners of this class",
+            "Hello, Sir... the shadows remember you well  they’ve been waiting"
         ];
 
         const teacherMessages = [
@@ -9361,12 +9367,10 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             calculateDaysSinceGraduation();
-
             createNavParticles();
-
             initSlideshow();
-
             setupEventListeners();
+            setupAutocomplete();
 
             setTimeout(() => {
                 welcomeModal.style.display = 'flex';
