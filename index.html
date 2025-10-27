@@ -578,34 +578,6 @@
             animation: shine 3s infinite;
         }
 
-        .cobweb {
-            position: absolute;
-            font-size: 40px;
-            opacity: 0.3;
-            animation: cobwebFloat 15s infinite linear;
-            z-index: 1;
-        }
-
-        @keyframes cobwebFloat {
-            0% {
-                transform: rotate(0deg) scale(1);
-                opacity: 0.2;
-            }
-            50% {
-                transform: rotate(180deg) scale(1.1);
-                opacity: 0.4;
-            }
-            100% {
-                transform: rotate(360deg) scale(1);
-                opacity: 0.2;
-            }
-        }
-
-        .cobweb.tl { top: 20px; left: 20px; }
-        .cobweb.tr { top: 20px; right: 20px; }
-        .cobweb.bl { bottom: 20px; left: 20px; }
-        .cobweb.br { bottom: 20px; right: 20px; }
-
         .falling-emoji {
             position: fixed;
             top: -50px;
@@ -1482,18 +1454,6 @@
             border-radius: 4px;
             z-index: 4;
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-            animation: coffinHandle 3s ease-in-out infinite;
-        }
-
-        @keyframes coffinHandle {
-            0%, 100% {
-                box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-                background: linear-gradient(90deg, #8b0000, #ff0000, #8b0000);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.4);
-                background: linear-gradient(90deg, #ff0000, #ff4444, #ff0000);
-            }
         }
         
         .classmate-container.boy {
@@ -3065,32 +3025,8 @@
             position: absolute;
             font-size: 30px;
             color: var(--primary-orange);
-            animation: cornerGlow 3s infinite alternate;
         }
-        
-        @keyframes cornerGlow {
-            0%, 100% {
-                text-shadow: 0 0 10px var(--primary-orange);
-                transform: scale(1);
-                color: #ff6b6b;
-            }
-            25% {
-                text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4444;
-                transform: scale(1.2);
-                color: #ff0000;
-            }
-            50% {
-                text-shadow: 0 0 15px #8b0000, 0 0 25px #8b0000;
-                transform: scale(1.1);
-                color: #8b0000;
-            }
-            75% {
-                text-shadow: 0 0 25px #ff4444, 0 0 35px #ff6b6b;
-                transform: scale(1.3);
-                color: #ff4444;
-            }
-        }
-        
+                
         .corner-tl {
             top: 15px;
             left: 15px;
@@ -3900,19 +3836,6 @@
         @keyframes eyesBlink {
             0%, 90%, 100% { opacity: 0; }
             5%, 85% { opacity: 0.8; }
-        }
-
-        .cauldron {
-            position: absolute;
-            font-size: 50px;
-            bottom: 0;
-            opacity: 0.7;
-            animation: cauldronBubble 15s ease-in-out infinite;
-        }
-
-        @keyframes cauldronBubble {
-            0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
-            50% { transform: translateY(-10px) scale(1.05); opacity: 0.8; }
         }
 
         .spell-book {
@@ -5704,11 +5627,6 @@
             </div>
         </div>
         
-        <div class="cobweb tl">🕸️</div>
-        <div class="cobweb tr">🕸️</div>
-        <div class="cobweb bl">🕸️</div>
-        <div class="cobweb br">🕸️</div>
-
     </section>
 
     <!-- Journey -->
@@ -5733,10 +5651,6 @@
                     <div class="spooky-eyes" style="top: 50%; left: 70%; animation-delay: 4s;">👀</div>
                     <div class="spooky-eyes" style="top: 70%; left: 40%; animation-delay: 7s;">👀</div>
                     <div class="spooky-eyes" style="top: 25%; left: 90%; animation-delay: 10s;">👀</div>
-
-
-                    <div class="cauldron" style="left: 10%; animation-delay: 0s;">⚗️</div>
-                    <div class="cauldron" style="left: 90%; animation-delay: 8s;">⚗️</div>
 
                     <div class="spell-book" style="top: 35%; left: 10%; animation-delay: 2s;">📖</div>
                     <div class="spell-book" style="top: 55%; left: 90%; animation-delay: 11s;">📖</div>
@@ -9029,9 +8943,9 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="spirit-details">
-                                    <div class="spirit-name">Email</div>
+                                    <div class="spirit-name">Email Spirit</div>
                                     <div class="spirit-contact-info">edmarbentulan098@gmail.com</div>
-                                    
+                                    <div class="spirit-note">Whisper through electronic ravens</div>
                                 </div>
                             </div>
 
@@ -9040,9 +8954,9 @@
                                     <i class="fab fa-telegram"></i>
                                 </div>
                                 <div class="spirit-details">
-                                    <div class="spirit-name">Telegram</div>
+                                    <div class="spirit-name">Telegram Ghost</div>
                                     <div class="spirit-contact-info">@Ed200317</div>
-                                    
+                                    <div class="spirit-note">Messages through spectral wires</div>
                                 </div>
                             </div>
 
@@ -9051,9 +8965,9 @@
                                     <i class="fab fa-instagram"></i>
                                 </div>
                                 <div class="spirit-details">
-                                    <div class="spirit-name">Instagram</div>
+                                    <div class="spirit-name">Instagram Phantom</div>
                                     <div class="spirit-contact-info">@edm_.03</div>
-                                    
+                                    <div class="spirit-note">Apparitions in your feed</div>
                                 </div>
                             </div>
 
@@ -9062,9 +8976,9 @@
                                     <i class="fab fa-facebook-messenger"></i>
                                 </div>
                                 <div class="spirit-details">
-                                    <div class="spirit-name">Messenger</div>
+                                    <div class="spirit-name">Messenger Wraith</div>
                                     <div class="spirit-contact-info">@EdTamayosaBentulan</div>
-                                    
+                                    <div class="spirit-note">Echoes in the chat realm</div>
                                 </div>
                             </div>
 
@@ -9073,9 +8987,9 @@
                                     <i class="fab fa-tiktok"></i>
                                 </div>
                                 <div class="spirit-details">
-                                    <div class="spirit-name">TikTok</div>
+                                    <div class="spirit-name">TikTok Banshee</div>
                                     <div class="spirit-contact-info">@ed._221</div>
-                                    
+                                    <div class="spirit-note">Screams in 15-second clips</div>
                                 </div>
                             </div>
                         </div>
@@ -9155,7 +9069,7 @@
         </div>
 
         <div class="warning-text" id="warningText">
-            ⚠️ WARNING: TRICK has Jumpscares! Proceed with caution. ⚠️
+            ⚠️ WARNING: Jumpscares! Proceed with caution. ⚠️
         </div>
     </div>
     
@@ -9205,81 +9119,26 @@
             <h3 class="announcement-title">Special Message</h3>
             <div class="announcement-message-container">
                 <p class="announcement-message">
-                    👻 HEY <strong>MAKANATURE</strong>! Please Read This Message:<br><br>
-
-                    If there’s any issue<br>
-                    just text me and I’ll fix it for you.<br><br>
+                    👻 HEY <strong>MAKANATURE</strong>! Just wanted to let you know:<br><br>
 
                     📸 <strong>Most photos here came from our group chats!</strong><br>
-                    They weren’t staged for perfection they were captured in the middle of real moments.<br>
-                    Moments we laughed, moments we struggled, moments we didn’t even know would become memories.<br><br>
-
-                    If one of these photos is yours it means you were there<br>
-                    you helped create the story of who we became.<br><br>
-
-                    Every smile frozen here once existed in motion<br>
-                    every joke, every celebration, every ordinary day that suddenly feels priceless.<br><br>
-
-                    These pictures remind us:<br>
-                    • how far we’ve gone<br>
-                    • how close we once were<br>
-                    • how time moves faster than we think<br><br>
-
-                    Look carefully<br>
-                    Each image holds a tiny chapter<br>
-                    and maybe... just maybe...<br>
-                    one of those chapters belongs to <strong>you and me.</strong> 🧡<br><br>
-                    
-                    We were like stars in one sky,
-                    same story different lights.<br>
-                    Every picture is a planet of laughter
-                    a memory shining through the night.<br><br>
-
-                    Our smiles became constellations
-                    holding moments we don’t want to lose.<br>
-                    If you see a photo you took
-                    you’re part of this galaxy we choose.<br><br>
+                    If you see the photo you’ve taken, it’s one of the memories that built who we are. it means you’re part of the story that made our class shine.
+                    Every picture here is a piece of time the smiles, the laughter, the days we’ll never find again.
+                    I keep them because they remind me how far we’ve gone, how close we once were.
+                    Each photo has a little story, and maybe… one of them is ours.<br><br>
 
                     🎃 <strong>I update this website on special occasions!</strong><br>
-                    Valentine's Day Halloween, Christmas, and New Year <br>
+                    Halloween, Christmas, New Year, and Valentine's Day<br>
                     expect new features and memories each time!<br><br>
 
                     💬 I made this so we’ll always have a place to <strong>look back and smile</strong>.<br>
                     Time moves fast but these pictures will always <strong>keep our memories close</strong> like a story that never ends.<br>
-                    No matter where we go <strong>this page will always bring us back together.</strong><br><br>
+                    No matter where we go <strong>this page will always bring us back together.</strong>
 
-                    <strong>🌌 Our Makanature 🌿</strong><br>
-                    (Poem for the Class)
-
-                    We are stars in one sky<br>
-                    shining even when we dont try.<br><br>
-
-                    Some days bright some days low<br>
-                    but together we always glow.<br><br>
-
-                    We grow like trees in the wild<br>
-                    messy, loud, happy, chld like.<br><br>
-
-                    Leaves fall seasons change<br>
-                    but our bond never feels strange.<br>
-                    We laugh like rivers run<br>
-                    under sun and moon we are one.<br><br>
-
-                    If one star goes far away<br>
-                    the night still remembers where they stay.<br><br>
-
-                    Our memries live in every breeze<br>
-                    from mountains tall to ocean seas.<br>
-                    Even when roads turn apart<br>
-                    we keep each othr in the heart.<br><br>
-
-                    Makanature forever friends<br>
-                    until the final sunset ends.<br><br>
-
-                    Thanks for being the best class ever! Take care! Enjoy our digital memorial!
+                    💀 Thanks for being the best class ever! Enjoy our digital memorial!
                 </p>
             </div>
-            <button class="announcement-btn" id="announcementBtn">I’ll hold these moments close</button>
+            <button class="announcement-btn" id="announcementBtn">AYE, I UNDERSTAND, CAPTAIN!</button>
         </div>
     </div>
 
@@ -9365,8 +9224,6 @@
         ];
 
         const studentMessages = [
-          "Happy Halloween [name]… ye beauty that even the ghosts be whisperin about… BOHAHAHA",
-          "Arrr [name]… the stars be jealous o the sparkle in yer eyes this cursed night… MUAHAHA",
           "Ah… [name], the moon itself blushes at your arrival",
           "[name]… The night awakens as your shadow graces the halls, ",
           "I sense your heartbeat in the dark, [name]… and my, how lovely you are today."
@@ -9955,7 +9812,7 @@
                 const bgMusic = document.getElementById('backgroundMusic');
                 const bgMusic2 = document.getElementById('backgroundMusic2');
 
-                jumpscareImage.src = "HalloweenSpecial/Freddy.gif";
+                jumpscareImage.src = "HalloweenSpecial/freddy.gif";
 
                 bgMusic.pause();
                 bgMusic2.pause();
@@ -10008,7 +9865,7 @@
                 bgMusic.pause();
                 bgMusic2.pause();
 
-                jumpscareImage.src = "HalloweenSpecial/Foxy.gif";
+                jumpscareImage.src = "HalloweenSpecial/foxy.gif";
 
                 jumpscareOverlay.style.display = 'flex';
 
@@ -10485,7 +10342,3 @@
     </script>
 </body>
 </html>
-
-
-
-
