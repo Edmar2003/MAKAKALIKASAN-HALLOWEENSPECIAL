@@ -3019,33 +3019,6 @@
                 opacity: 0.6;
             }
         }
-
-        
-        .corner-decoration {
-            position: absolute;
-            font-size: 30px;
-            color: var(--primary-orange);
-        }
-                
-        .corner-tl {
-            top: 15px;
-            left: 15px;
-        }
-        
-        .corner-tr {
-            top: 15px;
-            right: 15px;
-        }
-        
-        .corner-bl {
-            bottom: 15px;
-            left: 15px;
-        }
-        
-        .corner-br {
-            bottom: 15px;
-            right: 15px;
-        }
         
         .modal-title {
             font-size: 2.8rem;
@@ -3105,7 +3078,7 @@
                 0 0 30px rgba(255, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2),
                 inset 0 -4px 0 rgba(0, 0, 0, 0.4);
-            animation: bloodPulse 3s infinite, hauntedFloat 4s ease-in-out infinite;
+            animation: hauntedFloat 4s ease-in-out infinite;
             position: relative;
             overflow: hidden;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -3128,36 +3101,13 @@
         }
 
         .enter-btn::after {
-            content: '💀';
+            content: '';
             position: absolute;
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.4rem;
             filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.7));
-            animation: skullFloat 2s ease-in-out infinite;
-        }
-
-        @keyframes bloodPulse {
-            0%, 100% {
-                box-shadow: 
-                    0 8px 25px rgba(139, 0, 0, 0.7),
-                    0 0 30px rgba(255, 0, 0, 0.4),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-                    inset 0 -4px 0 rgba(0, 0, 0, 0.4);
-                border-color: #ff0000;
-                background: linear-gradient(135deg, #8b0000, #660000, #8b0000, #400000);
-            }
-            50% {
-                box-shadow: 
-                    0 8px 35px rgba(255, 0, 0, 0.9),
-                    0 0 50px rgba(255, 0, 0, 0.7),
-                    0 0 70px rgba(139, 0, 0, 0.5),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-                    inset 0 -4px 0 rgba(0, 0, 0, 0.5);
-                border-color: #ff4444;
-                background: linear-gradient(135deg, #ff0000, #8b0000, #ff0000, #660000);
-            }
         }
 
         @keyframes hauntedFloat {
@@ -3166,21 +3116,6 @@
             }
             50% {
                 transform: translateY(-5px);
-            }
-        }
-
-        @keyframes skullFloat {
-            0%, 100% {
-                transform: translateY(-50%) rotate(0deg);
-            }
-            25% {
-                transform: translateY(-50%) rotate(10deg) translateY(-2px);
-            }
-            50% {
-                transform: translateY(-50%) rotate(-5deg) translateY(1px);
-            }
-            75% {
-                transform: translateY(-50%) rotate(5deg) translateY(-2px);
             }
         }
 
@@ -5541,20 +5476,6 @@
 
     <div class="welcome-modal" id="welcomeModal">
         <div class="welcome-content">
-            
-            <!-- Decorations -->
-            <div class="corner-decoration corner-tl">
-                <i class="fas fa-skull-crossbones"></i>
-            </div>
-            <div class="corner-decoration corner-tr">
-                <i class="fas fa-ghost"></i>
-            </div>
-            <div class="corner-decoration corner-bl">
-                <i class="fas fa-spider"></i>
-            </div>
-            <div class="corner-decoration corner-br">
-                <i class="fas fa-bat"></i>
-            </div>
 
             <h2 class="modal-title">ENTER THE HAUNTED REALM OF MAKAKALIKASAN</h2>
             <p class="modal-subtitle">Speak your last name to awaken the spirits of our haunted class</p>
